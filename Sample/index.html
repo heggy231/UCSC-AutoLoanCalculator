@@ -1,0 +1,39 @@
+<html>
+<head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script type="text/javascript" src="script.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+</head>
+  
+<body>
+  <div id="title" class="text-center">
+    <h2>Monthly Payment Loan Calculator</h2>
+    <h4>Fill the box and click enter</h4>
+    <h5>To re-use it, just change the values</h5>
+  </div>
+  
+  <div class="box">
+    <div class="calc">
+ 
+      <p>Loan Amount: $<input id="amount" type="number" min="1" max="1000000" onchange="computeLoan()"></p>
+      <p>Interest Rate: <input id="interest_rate" type="number" min="0" max="100" value="10" step=".1" onchange="computeLoan()">%</p>
+      <p>Months: <input id="months" type="number" min="1" max="72" value="1" step="1" onchange="computeLoan()"></p>
+      <h2 id="payment"></h2>
+      </div> <!-- end of calc-->
+  </div> <!-- end of box -->
+  
+  <div class="row text-center"> <!-- for footer -->
+      <h5><a href="http://heggy.me/" target="_blank">Heggy Castaneda</a> | <a href="https://medium.com/@heggyy" target="_blank">Projects Blogs</a></h5>
+    </div> <!-- end footer -->
+  
+</body>
+</html>
+
+
+
