@@ -17,6 +17,6 @@ function computeLoan() {
 }
 
 
-$.getJSON("lender.json", function(json) {
+$.getJSON("lender.json","", function(json) {
 	console.log(json);
 });
