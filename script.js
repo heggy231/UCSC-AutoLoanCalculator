@@ -15,3 +15,8 @@ function computeLoan() {
   // inputs payment in id='payment' in html
   document.getElementById('payment').innerHTML = "Monthly Payment = $" + payment;
 }
+
+
+$.getJSON("lender.json", function(json) {
+	console.log(json);
+});

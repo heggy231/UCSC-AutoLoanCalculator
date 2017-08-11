@@ -15,3 +15,4 @@ function computeLoan(){
 	//render to the html
 	document.getElementById('payment').innerHTML = "Monthly Payment = $"+payment;
 }
+
