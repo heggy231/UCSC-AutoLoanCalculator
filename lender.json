@@ -1,0 +1,8 @@
+{[
+  { lenderName: "Light Stream",
+    APR: 2%
+  },
+  { lenderName: "Capital One",
+    APR: 3%
+  }
+]}
