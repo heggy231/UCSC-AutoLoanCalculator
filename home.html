@@ -2,12 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-    <script type="text/javascript" src="script.js">
-    </script>
-
-
   </head>
   <body>
 
@@ -15,7 +9,7 @@
     <!-- 3 fields of Loan Amount, Interest Rate, Months -->
     <!-- onchange will run computeLoan() function when data gets changed -->
     <p> Loan Amount: $ 
-      <input id="amount" type="number" min="1" max="1000000" onchange="computeLoan()"> 
+      <input id="amount" min="1" max="1000000" onchange="computeLoan()" onkeyup="onlyNumbers()"> 
     </p>
     <p> Interest Rate: 
       <!-- step = "0.1" inc/dec by tenth each time you press up/down -->
@@ -33,14 +27,22 @@
         <th>Estimated Payment</th>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td id='lender1'></td>
+        <td id='apr1'></td>
+        <td id='payment1'></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td id='lender2'></td>
+        <td id='apr2'></td>
+        <td id='payment2'></td>
       </tr>
-  </body>
+    </table>
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+		<script src="script.js"></script>
+	</body>
 </html>
