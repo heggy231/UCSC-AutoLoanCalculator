@@ -1,4 +1,5 @@
 //
+
 function computeLoan() {
   // gather all html id amount, interest_rate, months
   // each gets its.value of each fields
@@ -44,3 +45,8 @@ $.getJSON("lender.json","", function(json) {
   console.log(json);
 });
 
+function clearForm () {
+  // for inputs use .value, for regular textbox use .textContent
+  document.getElementById('amount').value = '';
+  
+}
