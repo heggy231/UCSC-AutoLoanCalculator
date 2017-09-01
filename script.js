@@ -77,6 +77,7 @@ function clearForm () {
   // for inputs use .value, for regular textbox use .textContent
   document.getElementById('amount').value = '';
   document.getElementById('interest_rate').value = '';
+  document.getElementById('months').value = '';
   document.getElementById('lender1').value = '';
   document.getElementById('lender2').value = '';
   document.getElementById('apr1').value = '';
