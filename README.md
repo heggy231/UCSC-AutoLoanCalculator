@@ -7,6 +7,7 @@ Demo site:
 1) https://spice-cobweb.glitch.me/
 
 Spec doc:
+
 [ &#10004; ] It should only allow number in amount loan field
 
 [ &#10004; ] It should render stand alone json lender data
