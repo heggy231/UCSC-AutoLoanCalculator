@@ -3,6 +3,8 @@
 function computeLoan() {
   // gather all html id amount, interest_rate, months
   // each gets its.value of each fields
+  // regex /[^\d]/g /pattern/, ^ negate, \d digits, g global => if it is not digit replace
+  //  with nothing
   var amount = document.getElementById('amount').value.toString().replace(/[^\d]/g, "");
   var interest_rate = document.getElementById('interest_rate').value;
   var months = document.getElementById('months').value;
@@ -16,14 +18,25 @@ function computeLoan() {
   // inputs payment in id='payment' in html
   document.getElementById('payment').innerHTML = "Monthly Payment = $" + payment;
   
-  // filter out % from apr %
+  // filters out %unit from apr from lender
   var apr1 = document.getElementById('apr1').textContent.toString().replace(/[^\d]/g, "");
-  console.log(apr1);
+  // console.log(apr1); /*debugging*/
   interest = (amount * (apr1 * .01)) / months;
   payment = ((amount / months) + interest).toFixed(2);
   payment = payment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  
+  // payment calculator for lender1
   var payment1 = document.getElementById('payment1');
   payment1.textContent = "Monthly Payment = $" + payment;
+  
+  var apr2 = document.getElementById('apr2').textContent.toString().replace(/[^\d]/g, "");
+  interest = (amount * (apr2 * .01)) / months;
+  payment = ((amount / months) + interest).toFixed(2);
+  payment = payment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  
+  // payment calculator for lender2
+  var payment2 = document.getElementById('payment2');
+  payment2.textContent = "Monthly Payment = $" + payment;
 }
 
 // allow only numbers to be input on LoanAmount
@@ -43,7 +56,7 @@ $.getJSON("lender.json","", function(json) {
   var apr1 = document.getElementById('apr1');
   apr1.textContent = lenderData[0].APR + "%";
   
-  console.log(json);
+  // console.log(json); /*debugging*/
 });
 
 // retrieves json for lender2
