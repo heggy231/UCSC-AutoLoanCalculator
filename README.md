@@ -4,9 +4,7 @@ clone of
 http://www.bankrate.com/calculators/auto/auto-loan-calculator.aspx
 
 Demo site: 
-1) http://heggy.me/UCSC-AutoLoanCalculator/home.html
-
-2) https://spice-cobweb.glitch.me/
+1) https://spice-cobweb.glitch.me/
 
 Spec doc:
 [ &#10004; ] It should only allow number in amount loan field
