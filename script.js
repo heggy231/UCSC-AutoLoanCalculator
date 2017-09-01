@@ -48,5 +48,6 @@ $.getJSON("lender.json","", function(json) {
 function clearForm () {
   // for inputs use .value, for regular textbox use .textContent
   document.getElementById('amount').value = '';
+  document.getElementById('interest_rate').value = '';
   
 }
