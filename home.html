@@ -2,43 +2,57 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
   </head>
+
   <body onload="clearForm()">
-<!--     <body> -->
-
-
+    <div id="title" class="text-center">
+      <h2>Monthly Payment Loan Calculator with Lender Connector</h2>
+      <h4>Start filling out desired loan amount and apr</h4>
+      <h4>Monthly Payment for apr and available lender apr figure will appear.</h4>
+    </div>
+    
+    <!-- box bootstrap rsc https://www.bootply.com/PqczQiwNlz-->
     <!-- 3 fields of Loan Amount, Interest Rate, Months -->
     <!-- onchange will run computeLoan() function when data gets changed -->
-    <p> Loan Amount: $ 
-      <input id="amount" min="1" max="1000000" onchange="computeLoan()" onkeyup="onlyNumbers()"> 
-    </p>
-    <p> Interest Rate: 
-      <!-- step = "0.1" inc/dec by tenth each time you press up/down -->
-      <input id="interest_rate" type="number" min="0" max="100" value="5" step=".1" onchange="computeLoan()"> %
-    </p>
-    <p> Months: 
-      <input id="months" type="number" min="1" max="72" value="1" step="1" onchange="computeLoan()">
-    </p>
-    <!-- payment info gets render here -->
-    <h2 id="payment"></h2>
-    <table>
-      <tr>
-        <th>Lender</th>
-        <th>APR</th> 
-        <th>Estimated Payment</th>
-      </tr>
-      <tr>
-        <td id="lender1"></td>
-        <td id="apr1"></td>
-        <td id="payment1"></td>
-      </tr>
-      <tr>
-        <td id="lender2"></td>
-        <td id="apr2"></td>
-        <td id="payment2"></td>
-      </tr>
-    </table>
-
+    <div class = "box">
+      <div class = "calc">
+        <p> Loan Amount: $ 
+          <input id="amount" min="1" max="1000000" onchange="computeLoan()" onkeyup="onlyNumbers()"> 
+        </p>
+        <p> Interest Rate: 
+          <!-- step = "0.1" inc/dec by tenth each time you press up/down -->
+          <input id="interest_rate" type="number" min="0" max="100" value="5" step=".1" onchange="computeLoan()"> %
+        </p>
+        <p> Months: 
+          <input id="months" type="number" min="1" max="72" value="1" step="1" onchange="computeLoan()">
+        </p>
+        <!-- payment info gets render here -->
+        <h2 id="payment"></h2>
+      </div> <!-- end of calc -->
+    </div> <!-- end of box -->
+<!-- Table resource: https://www.coursera.org/learn/html/lecture/HtqUe/02-08-tables -->
+    <div class = "box1">
+      <div class = "calc">
+        <table>
+          <tr>
+            <th>Lender</th>
+            <th>APR</th> 
+            <th>Estimated Payment</th>
+          </tr>
+          <tr>
+            <td id="lender1"></td>
+            <td id="apr1"></td>
+            <td id="payment1"></td>
+          </tr>
+          <tr>
+            <td id="lender2"></td>
+            <td id="apr2"></td>
+            <td id="payment2"></td>
+          </tr>
+        </table>
+      </div> <!-- end of calc-->
+    </div> <!-- end of box1 -->
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
