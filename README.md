@@ -6,7 +6,7 @@ http://www.bankrate.com/calculators/auto/auto-loan-calculator.aspx
 **[Demo](https://spice-cobweb.glitch.me/)**
 
 
-Spec doc:
+- Spec doc:
 
 > [ &#10004; ] It should only allow number in amount loan field
 > 
