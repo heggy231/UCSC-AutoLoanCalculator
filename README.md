@@ -1,6 +1,6 @@
 # UCSC-AutoLoanCalculator
 **[Demo](https://spice-cobweb.glitch.me/)**\
-JavaScript Comp AJAX course capstone: Recreate [bankrate.com](http://www.bankrate.com/calculators/auto/auto-loan-calculator.aspx) which is an auto loan calculator
+JavaScript Comp AJAX course capstone project: Recreate [bankrate.com](http://www.bankrate.com/calculators/auto/auto-loan-calculator.aspx) which is an auto loan calculator
 
 - Spec doc:
 
