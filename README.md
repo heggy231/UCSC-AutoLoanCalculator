@@ -3,8 +3,8 @@ JavaScript Comp AJAX course capstone clone bankrate.com auto loan calculator
 clone of 
 http://www.bankrate.com/calculators/auto/auto-loan-calculator.aspx
 
-Demo site: 
-1) https://spice-cobweb.glitch.me/
+[Demo](https://spice-cobweb.glitch.me/)
+
 
 Spec doc:
 
